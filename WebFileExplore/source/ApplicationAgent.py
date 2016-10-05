@@ -1,5 +1,14 @@
 import subprocess
 
-appstatus = subprocess.call(["/usr/bin/open", "-W", "-n", "-a", "/Applications/TextEdit.app"])
+def OpenTextEdit():
+	subprocess.call(["/usr/bin/open", "-a", "/Applications/TextEdit.app"])
 
-print(appstatus)
+def OpenMPlayerX():
+	subprocess.call(["/usr/bin/open", "-a", "/Applications/MPlayerX.app"])
+
+def OpenTextFile(file):
+	subprocess.call(["/usr/bin/open", "-a", "/Applications/TextEdit.app", file])
+
+def OpenVideo(video):
+	subprocess.call(["/usr/bin/open", "-a", "/Applications/MPlayerX.app", video])
+
